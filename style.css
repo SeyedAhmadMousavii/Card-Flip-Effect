@@ -1,0 +1,23 @@
+.container img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 300px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: 2s;
+    border: 10px solid #fff;
+    border-radius: 20px;
+}
+.container img:nth-of-type(1){
+    transform: perspective(2000px) rotateY(0deg);
+}
+.container img:nth-of-type(2){
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.container:hover img:nth-of-type(1){
+    transform: perspective(1000px) rotateY(180deg);
+}
+.container:hover img:nth-of-type(2){
+    transform: perspective(1000px) rotateY(0deg);
+}
